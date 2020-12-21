@@ -41,7 +41,7 @@ ext {
     mavenArtifactId = 'easypermissions-ktx'
     mavenVersion = '0.1.0'
 
-    bintrayOrg = 'mvalcelenu'
+    bintrayOrg = 'mvalceleanu'
 
     compileSdk = 29
     targetSdk = 29

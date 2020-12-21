@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package mvalceleanu.easypermissions.dialogs.settings
+package mvalceleanu.easypermissions.dialogs
 
 import android.app.Activity
 import android.app.Dialog

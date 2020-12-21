@@ -17,7 +17,7 @@ package mvalceleanu.easypermissions.helpers
 
 import android.content.Context
 import androidx.fragment.app.Fragment
-import mvalceleanu.easypermissions.dialogs.rationale.RationaleDialog
+import mvalceleanu.easypermissions.dialogs.RationaleDialog
 import mvalceleanu.easypermissions.helpers.base.PermissionsHelper
 import mvalceleanu.easypermissions.models.PermissionRequest
 

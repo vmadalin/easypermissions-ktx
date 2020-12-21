@@ -18,7 +18,7 @@ package mvalceleanu.easypermissions.components
 import android.app.Activity
 import mvalceleanu.easypermissions.annotations.AfterPermissionGranted
 import mvalceleanu.easypermissions.annotations.Mockable
-import mvalceleanu.easypermissions.facade.EasyPermissions
+import mvalceleanu.easypermissions.EasyPermissions
 
 @Mockable
 class TestActivity :

@@ -17,7 +17,7 @@ package mvalceleanu.easypermissions.components
 
 import androidx.fragment.app.FragmentActivity
 import mvalceleanu.easypermissions.annotations.Mockable
-import mvalceleanu.easypermissions.facade.EasyPermissions
+import mvalceleanu.easypermissions.EasyPermissions
 
 @Mockable
 class TestSupportFragmentActivity :

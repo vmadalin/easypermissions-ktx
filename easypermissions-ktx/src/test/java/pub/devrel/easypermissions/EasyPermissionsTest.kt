@@ -45,7 +45,6 @@ import org.junit.Assert.fail
 import org.mockito.Mockito.*
 import org.robolectric.Shadows.shadowOf
 import org.robolectric.shadows.ShadowAlertDialog
-import mvalceleanu.easypermissions.facade.EasyPermissions
 import mvalceleanu.easypermissions.models.PermissionRequest
 
 private const val RATIONALE = "RATIONALE"

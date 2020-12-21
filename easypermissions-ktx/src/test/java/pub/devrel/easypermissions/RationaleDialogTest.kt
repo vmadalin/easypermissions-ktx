@@ -28,7 +28,7 @@ import org.mockito.MockitoAnnotations
 import org.robolectric.RobolectricTestRunner
 import org.robolectric.annotation.Config
 import mvalceleanu.easypermissions.components.TestActivity
-import mvalceleanu.easypermissions.dialogs.rationale.RationaleDialog
+import mvalceleanu.easypermissions.dialogs.RationaleDialog
 import mvalceleanu.easypermissions.models.PermissionRequest
 
 private const val REQUEST_CODE = 5

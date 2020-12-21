@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package mvalceleanu.easypermissions.facade
+package mvalceleanu.easypermissions
 
 import android.Manifest
 import android.app.Activity

@@ -24,9 +24,9 @@ import android.widget.Toast.LENGTH_LONG
 import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_main.*
 import mvalceleanu.easypermissions.annotations.AfterPermissionGranted
-import mvalceleanu.easypermissions.dialogs.settings.DEFAULT_SETTINGS_REQ_CODE
-import mvalceleanu.easypermissions.dialogs.settings.SettingsDialog
-import mvalceleanu.easypermissions.facade.EasyPermissions
+import mvalceleanu.easypermissions.dialogs.DEFAULT_SETTINGS_REQ_CODE
+import mvalceleanu.easypermissions.dialogs.SettingsDialog
+import mvalceleanu.easypermissions.EasyPermissions
 
 private const val TAG = "MainActivity"
 private const val REQUEST_CODE_CAMERA_PERMISSION = 123

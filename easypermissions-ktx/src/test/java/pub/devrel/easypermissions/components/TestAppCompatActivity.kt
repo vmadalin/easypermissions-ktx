@@ -20,7 +20,7 @@ import androidx.appcompat.app.AppCompatActivity
 import mvalceleanu.easypermissions.R
 import mvalceleanu.easypermissions.annotations.AfterPermissionGranted
 import mvalceleanu.easypermissions.annotations.Mockable
-import mvalceleanu.easypermissions.facade.EasyPermissions
+import mvalceleanu.easypermissions.EasyPermissions
 
 @Mockable
 class TestAppCompatActivity :
