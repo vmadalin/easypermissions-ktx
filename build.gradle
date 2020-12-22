@@ -38,7 +38,7 @@ ext {
 
     githubUrl = 'https://github.com/VMadalin/easypermissions-ktx'
 
-    mavenGroup = 'mvalceleanu'
+    mavenGroup = 'com.vmadalin'
     mavenArtifactId = 'easypermissions-ktx'
     mavenVersion = '0.1.0'
 

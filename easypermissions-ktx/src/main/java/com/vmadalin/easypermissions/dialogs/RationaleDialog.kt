@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.mvalceleanu.easypermissions.dialogs
+package com.vmadalin.easypermissions.dialogs
 
 import android.app.Activity
 import android.app.Dialog
@@ -22,9 +22,9 @@ import android.content.DialogInterface
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
-import com.mvalceleanu.easypermissions.EasyPermissions
-import com.mvalceleanu.easypermissions.helpers.base.PermissionsHelper
-import com.mvalceleanu.easypermissions.models.PermissionRequest
+import com.vmadalin.easypermissions.EasyPermissions
+import com.vmadalin.easypermissions.helpers.base.PermissionsHelper
+import com.vmadalin.easypermissions.models.PermissionRequest
 
 /**
  * Dialog to prompt the user to go to the app's settings screen and enable permissions. If the user

@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.mvalceleanu.easypermissions.sample
+package com.vmadalin.easypermissions.sample
 
 import android.Manifest
 import android.os.Bundle
@@ -24,8 +24,8 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import kotlinx.android.synthetic.main.fragment_main.*
-import com.mvalceleanu.easypermissions.annotations.AfterPermissionGranted
-import com.mvalceleanu.easypermissions.EasyPermissions
+import com.vmadalin.easypermissions.annotations.AfterPermissionGranted
+import com.vmadalin.easypermissions.EasyPermissions
 
 private const val TAG = "MainFragment"
 private const val REQUEST_CODE_SMS_PERMISSION = 126

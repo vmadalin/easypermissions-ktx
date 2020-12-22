@@ -83,7 +83,7 @@ bintray {
 
     filesSpec {
         from "$buildDir/publications/library/pom-default.xml"
-        into "com/mvalceleanu/$mavenArtifactId/$mavenVersion/"
+        into "com/vmadalin/$mavenArtifactId/$mavenVersion/"
         rename { String fileName ->
             "${mavenArtifactId}-${mavenVersion}.pom"
         }

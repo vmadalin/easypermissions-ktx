@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.mvalceleanu.easypermissions
+package com.vmadalin.easypermissions
 
 import android.Manifest.permission.ACCESS_FINE_LOCATION
 import android.Manifest.permission.READ_SMS
@@ -32,12 +32,12 @@ import org.mockito.MockitoAnnotations
 import org.robolectric.RobolectricTestRunner
 import org.robolectric.annotation.Config
 import org.robolectric.shadows.ShadowApplication
-import com.mvalceleanu.easypermissions.components.TestActivity
-import com.mvalceleanu.easypermissions.components.TestAppCompatActivity
-import com.mvalceleanu.easypermissions.components.TestFragment
-import com.mvalceleanu.easypermissions.components.TestSupportFragmentActivity
-import com.mvalceleanu.easypermissions.controllers.ActivityController
-import com.mvalceleanu.easypermissions.controllers.FragmentController
+import com.vmadalin.easypermissions.components.TestActivity
+import com.vmadalin.easypermissions.components.TestAppCompatActivity
+import com.vmadalin.easypermissions.components.TestFragment
+import com.vmadalin.easypermissions.components.TestSupportFragmentActivity
+import com.vmadalin.easypermissions.controllers.ActivityController
+import com.vmadalin.easypermissions.controllers.FragmentController
 import java.util.*
 import com.google.common.truth.Truth.assertThat
 import com.nhaarman.mockitokotlin2.capture
@@ -45,7 +45,7 @@ import org.junit.Assert.fail
 import org.mockito.Mockito.*
 import org.robolectric.Shadows.shadowOf
 import org.robolectric.shadows.ShadowAlertDialog
-import com.mvalceleanu.easypermissions.models.PermissionRequest
+import com.vmadalin.easypermissions.models.PermissionRequest
 
 private const val RATIONALE = "RATIONALE"
 private const val POSITIVE = "POSITIVE"

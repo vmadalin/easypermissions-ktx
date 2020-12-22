@@ -13,11 +13,11 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.mvalceleanu.easypermissions.controllers
+package com.vmadalin.easypermissions.controllers
 
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.testing.FragmentScenario
-import com.mvalceleanu.easypermissions.annotations.Mockable
+import com.vmadalin.easypermissions.annotations.Mockable
 import java.util.concurrent.CompletableFuture
 
 /**

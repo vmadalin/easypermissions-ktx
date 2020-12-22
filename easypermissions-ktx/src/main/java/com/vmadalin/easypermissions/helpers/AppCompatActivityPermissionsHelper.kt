@@ -13,34 +13,33 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.mvalceleanu.easypermissions.helpers
+package com.vmadalin.easypermissions.helpers
 
 import android.content.Context
-import androidx.fragment.app.Fragment
-import com.mvalceleanu.easypermissions.dialogs.RationaleDialog
-import com.mvalceleanu.easypermissions.helpers.base.PermissionsHelper
-import com.mvalceleanu.easypermissions.models.PermissionRequest
+import androidx.appcompat.app.AppCompatActivity
+import androidx.core.app.ActivityCompat
+import com.vmadalin.easypermissions.dialogs.RationaleDialog
+import com.vmadalin.easypermissions.helpers.base.PermissionsHelper
+import com.vmadalin.easypermissions.models.PermissionRequest
 
 /**
- * Permissions helper for [Fragment].
+ * Permissions helper for [AppCompatActivity].
  */
-internal class FragmentPermissionsHelper(
-    host: Fragment
-) : PermissionsHelper<Fragment>(host) {
+internal class AppCompatActivityPermissionsHelper(
+    host: AppCompatActivity
+) : PermissionsHelper<AppCompatActivity>(host) {
 
-    override var context: Context? = host.activity
+    override var context: Context? = host
 
     override fun directRequestPermissions(requestCode: Int, perms: Array<out String>) {
-        host.requestPermissions(perms, requestCode)
+        ActivityCompat.requestPermissions(host, perms, requestCode)
     }
 
     override fun shouldShowRequestPermissionRationale(perm: String): Boolean {
-        return host.shouldShowRequestPermissionRationale(perm)
+        return ActivityCompat.shouldShowRequestPermissionRationale(host, perm)
     }
 
     override fun showRequestPermissionRationale(permissionRequest: PermissionRequest) {
-        context?.let {
-            RationaleDialog(it, permissionRequest).showCompatDialog()
-        }
+        RationaleDialog(host, permissionRequest).showCompatDialog()
     }
 }

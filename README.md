@@ -13,7 +13,7 @@ EasyPermissions-ktx is installed by adding the following dependency to your `bui
 
 ```groovy
 dependencies {
-    implementation 'mvalceleanu:easypermissions-ktx:0.1.0'
+    implementation 'com.vmadalin:easypermissions-ktx:0.1.0'
 }
 ```
 
