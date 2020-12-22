@@ -1,7 +1,7 @@
-# EasyPermissions-ktx [![Build Status][1]][2] [![Code Coverage][3]][4] [![Android API][5]][6] [![Apache License][7]][8]
+# EasyPermissions-ktx [![Build Status][1]][2] [![Code Coverage][3]][4] [![Kotlin Version][5]][6] [![Android API][7]][8] [![Apache License][9]][10]
 
-EasyPermissions-ktx is a wrapper library to simplify basic system permissions logic when targeting
-Android M or higher.
+Kotlin version of the popular [googlesample/easypermissions](https://github.com/googlesamples/easypermissions) wrapper library to simplify basic system
+permissions logic on Android M or higher.
 
 ![](art/logo.png)
 
@@ -83,6 +83,7 @@ val request = PermissionRequest.Builder(spyActivity)
     .negativeButtonText(R.string.rationale_ask_cancel)
     .build()
 EasyPermissions.requestPermissions(spyActivity, request)
+```
 
 Optionally, for a finer control, you can have your `Activity` / `Fragment` implement
 the `PermissionCallbacks` interface.
@@ -197,7 +198,9 @@ Rationale callbacks don't necessarily imply permission changes. To check for tho
 [2]: https://travis-ci.com/vmadalin/easypermissions-ktx
 [3]: https://codecov.io/gh/vmadalin/easypermissions-ktx/branch/master/graph/badge.svg
 [4]: https://codecov.io/gh/vmadalin/easypermissions-ktx
-[5]: https://img.shields.io/badge/API-14%2B-blue.svg?style=flat
-[6]: https://android-arsenal.com/api?level=14
-[7]: https://img.shields.io/badge/License-Apache%202.0-lightgrey.svg
-[8]: http://www.apache.org/licenses/LICENSE-2.0
+[5]: https://img.shields.io/badge/kotlin-1.4.10-blue.svg
+[6]: http://kotlinlang.org/
+[7]: https://img.shields.io/badge/API-14%2B-blue.svg?style=flat
+[8]: https://android-arsenal.com/api?level=14
+[9]: https://img.shields.io/badge/License-Apache%202.0-lightgrey.svg
+[10]: http://www.apache.org/licenses/LICENSE-2.0
