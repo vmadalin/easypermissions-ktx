@@ -3,6 +3,7 @@ apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-allopen'
 apply plugin: 'com.vanniktech.android.junit.jacoco'
+apply plugin: 'org.jetbrains.dokka'
 
 allOpen {
     annotation("mvalceleanu.easypermissions.annotations.Mockable")

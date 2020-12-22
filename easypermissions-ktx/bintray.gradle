@@ -9,17 +9,9 @@ task sourcesJar(type: Jar) {
     archiveClassifier.set("sources")
 }
 
-task javadoc(type: Javadoc) {
-    source = android.sourceSets.main.java.srcDirs
-    classpath += configurations.compile
-    classpath += project.files(android.getBootClasspath().join(File.pathSeparator))
-
-    failOnError = false
-}
-
-task javadocJar(type: Jar, dependsOn: javadoc) {
-    archiveClassifier.set("sources")
-    from javadoc.destinationDir
+task javadocJar(type: Jar, dependsOn: dokkaJavadoc) {
+    archiveClassifier.set("javadoc")
+    from "$buildDir/dokka/javadoc"
 }
 
 artifacts {
