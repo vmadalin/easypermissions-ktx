@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package mvalceleanu.easypermissions.sample
+package com.mvalceleanu.easypermissions.sample
 
 import android.Manifest.permission.*
 import android.content.Intent
@@ -23,10 +23,10 @@ import android.widget.Toast
 import android.widget.Toast.LENGTH_LONG
 import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_main.*
-import mvalceleanu.easypermissions.annotations.AfterPermissionGranted
-import mvalceleanu.easypermissions.dialogs.DEFAULT_SETTINGS_REQ_CODE
-import mvalceleanu.easypermissions.dialogs.SettingsDialog
-import mvalceleanu.easypermissions.EasyPermissions
+import com.mvalceleanu.easypermissions.annotations.AfterPermissionGranted
+import com.mvalceleanu.easypermissions.dialogs.DEFAULT_SETTINGS_REQ_CODE
+import com.mvalceleanu.easypermissions.dialogs.SettingsDialog
+import com.mvalceleanu.easypermissions.EasyPermissions
 
 private const val TAG = "MainActivity"
 private const val REQUEST_CODE_CAMERA_PERMISSION = 123

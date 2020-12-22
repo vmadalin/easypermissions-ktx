@@ -13,11 +13,11 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package mvalceleanu.easypermissions.components
+package com.mvalceleanu.easypermissions.components
 
 import androidx.fragment.app.FragmentActivity
-import mvalceleanu.easypermissions.annotations.Mockable
-import mvalceleanu.easypermissions.EasyPermissions
+import com.mvalceleanu.easypermissions.annotations.Mockable
+import com.mvalceleanu.easypermissions.EasyPermissions
 
 @Mockable
 class TestSupportFragmentActivity :

@@ -13,11 +13,11 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package mvalceleanu.easypermissions.controllers
+package com.mvalceleanu.easypermissions.controllers
 
 import android.app.Activity
 import androidx.test.core.app.ActivityScenario
-import mvalceleanu.easypermissions.annotations.Mockable
+import com.mvalceleanu.easypermissions.annotations.Mockable
 import java.util.concurrent.CompletableFuture
 
 /**

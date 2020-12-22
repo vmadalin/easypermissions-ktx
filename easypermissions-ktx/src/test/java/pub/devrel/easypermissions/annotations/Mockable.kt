@@ -13,6 +13,6 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package mvalceleanu.easypermissions.annotations
+package com.mvalceleanu.easypermissions.annotations
 
 annotation class Mockable

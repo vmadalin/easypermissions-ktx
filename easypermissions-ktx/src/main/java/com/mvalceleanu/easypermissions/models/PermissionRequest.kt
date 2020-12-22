@@ -13,12 +13,12 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package mvalceleanu.easypermissions.models
+package com.mvalceleanu.easypermissions.models
 
 import android.content.Context
 import androidx.annotation.StringRes
 import androidx.annotation.StyleRes
-import mvalceleanu.easypermissions.R
+import com.mvalceleanu.easypermissions.R
 
 /**
  * An immutable model object that holds all of the parameters associated with a permission request,

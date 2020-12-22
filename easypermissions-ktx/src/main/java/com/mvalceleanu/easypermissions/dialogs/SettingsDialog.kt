@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package mvalceleanu.easypermissions.dialogs
+package com.mvalceleanu.easypermissions.dialogs
 
 import android.app.Activity
 import android.app.Dialog
@@ -26,7 +26,7 @@ import androidx.annotation.StringRes
 import androidx.annotation.StyleRes
 import androidx.appcompat.app.AlertDialog
 import androidx.fragment.app.Fragment
-import mvalceleanu.easypermissions.R
+import com.mvalceleanu.easypermissions.R
 
 const val DEFAULT_SETTINGS_REQ_CODE = 16061
 

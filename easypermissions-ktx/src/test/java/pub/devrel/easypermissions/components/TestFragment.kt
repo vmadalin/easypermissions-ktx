@@ -13,17 +13,17 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package mvalceleanu.easypermissions.components
+package com.mvalceleanu.easypermissions.components
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import mvalceleanu.easypermissions.R
-import mvalceleanu.easypermissions.annotations.AfterPermissionGranted
-import mvalceleanu.easypermissions.annotations.Mockable
-import mvalceleanu.easypermissions.EasyPermissions
+import com.mvalceleanu.easypermissions.R
+import com.mvalceleanu.easypermissions.annotations.AfterPermissionGranted
+import com.mvalceleanu.easypermissions.annotations.Mockable
+import com.mvalceleanu.easypermissions.EasyPermissions
 
 @Mockable
 class TestFragment :

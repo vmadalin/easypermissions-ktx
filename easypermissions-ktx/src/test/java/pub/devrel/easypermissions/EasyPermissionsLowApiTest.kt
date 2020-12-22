@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package mvalceleanu.easypermissions
+package com.mvalceleanu.easypermissions
 
 import android.Manifest
 import androidx.test.core.app.ApplicationProvider
@@ -22,12 +22,12 @@ import org.junit.Test
 import org.junit.runner.RunWith
 import org.robolectric.RobolectricTestRunner
 import org.robolectric.annotation.Config
-import mvalceleanu.easypermissions.components.TestActivity
-import mvalceleanu.easypermissions.components.TestAppCompatActivity
-import mvalceleanu.easypermissions.components.TestFragment
-import mvalceleanu.easypermissions.components.TestSupportFragmentActivity
-import mvalceleanu.easypermissions.controllers.ActivityController
-import mvalceleanu.easypermissions.controllers.FragmentController
+import com.mvalceleanu.easypermissions.components.TestActivity
+import com.mvalceleanu.easypermissions.components.TestAppCompatActivity
+import com.mvalceleanu.easypermissions.components.TestFragment
+import com.mvalceleanu.easypermissions.components.TestSupportFragmentActivity
+import com.mvalceleanu.easypermissions.controllers.ActivityController
+import com.mvalceleanu.easypermissions.controllers.FragmentController
 
 import com.google.common.truth.Truth.assertThat
 import org.mockito.*

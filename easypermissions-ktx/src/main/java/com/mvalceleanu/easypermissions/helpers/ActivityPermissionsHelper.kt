@@ -13,21 +13,21 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package mvalceleanu.easypermissions.helpers
+package com.mvalceleanu.easypermissions.helpers
 
+import android.app.Activity
 import android.content.Context
-import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
-import mvalceleanu.easypermissions.dialogs.RationaleDialog
-import mvalceleanu.easypermissions.helpers.base.PermissionsHelper
-import mvalceleanu.easypermissions.models.PermissionRequest
+import com.mvalceleanu.easypermissions.dialogs.RationaleDialog
+import com.mvalceleanu.easypermissions.helpers.base.PermissionsHelper
+import com.mvalceleanu.easypermissions.models.PermissionRequest
 
 /**
- * Permissions helper for [AppCompatActivity].
+ * Permissions helper for [Activity].
  */
-internal class AppCompatActivityPermissionsHelper(
-    host: AppCompatActivity
-) : PermissionsHelper<AppCompatActivity>(host) {
+internal class ActivityPermissionsHelper(
+    host: Activity
+) : PermissionsHelper<Activity>(host) {
 
     override var context: Context? = host
 
@@ -40,6 +40,6 @@ internal class AppCompatActivityPermissionsHelper(
     }
 
     override fun showRequestPermissionRationale(permissionRequest: PermissionRequest) {
-        RationaleDialog(host, permissionRequest).showCompatDialog()
+        RationaleDialog(host, permissionRequest).showDialog()
     }
 }

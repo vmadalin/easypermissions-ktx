@@ -13,16 +13,16 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package mvalceleanu.easypermissions.helpers.base
+package com.mvalceleanu.easypermissions.helpers.base
 
 import android.app.Activity
 import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
-import mvalceleanu.easypermissions.helpers.ActivityPermissionsHelper
-import mvalceleanu.easypermissions.helpers.AppCompatActivityPermissionsHelper
-import mvalceleanu.easypermissions.helpers.FragmentPermissionsHelper
-import mvalceleanu.easypermissions.models.PermissionRequest
+import com.mvalceleanu.easypermissions.helpers.ActivityPermissionsHelper
+import com.mvalceleanu.easypermissions.helpers.AppCompatActivityPermissionsHelper
+import com.mvalceleanu.easypermissions.helpers.FragmentPermissionsHelper
+import com.mvalceleanu.easypermissions.models.PermissionRequest
 
 /**
  * Delegate class to make permission calls based on the 'host' (Fragment, Activity, etc).

@@ -6,7 +6,7 @@ apply plugin: 'com.vanniktech.android.junit.jacoco'
 apply plugin: 'org.jetbrains.dokka'
 
 allOpen {
-    annotation("mvalceleanu.easypermissions.annotations.Mockable")
+    annotation("com.mvalceleanu.easypermissions.annotations.Mockable")
 }
 
 android {

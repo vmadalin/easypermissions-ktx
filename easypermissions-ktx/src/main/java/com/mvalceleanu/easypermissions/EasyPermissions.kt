@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package mvalceleanu.easypermissions
+package com.mvalceleanu.easypermissions
 
 import android.Manifest
 import android.app.Activity
@@ -25,10 +25,10 @@ import androidx.annotation.Size
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
-import mvalceleanu.easypermissions.annotations.AfterPermissionGranted
-import mvalceleanu.easypermissions.helpers.base.PermissionsHelper
-import mvalceleanu.easypermissions.models.PermissionRequest
-import mvalceleanu.easypermissions.utils.AnnotationsUtils
+import com.mvalceleanu.easypermissions.annotations.AfterPermissionGranted
+import com.mvalceleanu.easypermissions.helpers.base.PermissionsHelper
+import com.mvalceleanu.easypermissions.models.PermissionRequest
+import com.mvalceleanu.easypermissions.utils.AnnotationsUtils
 
 private const val TAG = "EasyPermissions"
 

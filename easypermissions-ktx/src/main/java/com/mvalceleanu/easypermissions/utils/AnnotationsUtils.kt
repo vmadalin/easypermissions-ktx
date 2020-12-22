@@ -13,10 +13,10 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package mvalceleanu.easypermissions.utils
+package com.mvalceleanu.easypermissions.utils
 
 import android.util.Log
-import mvalceleanu.easypermissions.annotations.AfterPermissionGranted
+import com.mvalceleanu.easypermissions.annotations.AfterPermissionGranted
 import java.lang.reflect.InvocationTargetException
 import kotlin.reflect.KClass
 

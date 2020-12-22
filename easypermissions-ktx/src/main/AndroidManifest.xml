@@ -2,7 +2,7 @@
 <!--suppress AndroidDomInspection -->
 <manifest
     xmlns:android="http://schemas.android.com/apk/res/android"
-    package="mvalceleanu.easypermissions">
+    package="com.mvalceleanu.easypermissions">
 
     <application>
         <activity android:name=".components.TestActivity"/>

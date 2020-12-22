@@ -13,12 +13,12 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package mvalceleanu.easypermissions.components
+package com.mvalceleanu.easypermissions.components
 
 import android.app.Activity
-import mvalceleanu.easypermissions.annotations.AfterPermissionGranted
-import mvalceleanu.easypermissions.annotations.Mockable
-import mvalceleanu.easypermissions.EasyPermissions
+import com.mvalceleanu.easypermissions.annotations.AfterPermissionGranted
+import com.mvalceleanu.easypermissions.annotations.Mockable
+import com.mvalceleanu.easypermissions.EasyPermissions
 
 @Mockable
 class TestActivity :

@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package mvalceleanu.easypermissions
+package com.mvalceleanu.easypermissions
 
 import android.Manifest.permission.ACCESS_FINE_LOCATION
 import android.Manifest.permission.READ_SMS
@@ -27,9 +27,9 @@ import org.mockito.Mockito.*
 import org.mockito.MockitoAnnotations
 import org.robolectric.RobolectricTestRunner
 import org.robolectric.annotation.Config
-import mvalceleanu.easypermissions.components.TestActivity
-import mvalceleanu.easypermissions.dialogs.RationaleDialog
-import mvalceleanu.easypermissions.models.PermissionRequest
+import com.mvalceleanu.easypermissions.components.TestActivity
+import com.mvalceleanu.easypermissions.dialogs.RationaleDialog
+import com.mvalceleanu.easypermissions.models.PermissionRequest
 
 private const val REQUEST_CODE = 5
 private val PERMS = arrayOf(READ_SMS, ACCESS_FINE_LOCATION)

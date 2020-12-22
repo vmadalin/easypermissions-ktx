@@ -13,13 +13,13 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package mvalceleanu.easypermissions.helpers
+package com.mvalceleanu.easypermissions.helpers
 
 import android.content.Context
 import androidx.fragment.app.Fragment
-import mvalceleanu.easypermissions.dialogs.RationaleDialog
-import mvalceleanu.easypermissions.helpers.base.PermissionsHelper
-import mvalceleanu.easypermissions.models.PermissionRequest
+import com.mvalceleanu.easypermissions.dialogs.RationaleDialog
+import com.mvalceleanu.easypermissions.helpers.base.PermissionsHelper
+import com.mvalceleanu.easypermissions.models.PermissionRequest
 
 /**
  * Permissions helper for [Fragment].
