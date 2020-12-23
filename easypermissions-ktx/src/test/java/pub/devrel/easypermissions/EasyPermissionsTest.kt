@@ -278,7 +278,7 @@ class EasyPermissionsTest {
         assertThat(
             EasyPermissions.somePermissionPermanentlyDenied(
                 spyActivity,
-                *ALL_PERMS
+                ALL_PERMS.toList()
             )
         ).isTrue()
     }
@@ -290,7 +290,7 @@ class EasyPermissionsTest {
         assertThat(
             EasyPermissions.somePermissionPermanentlyDenied(
                 spyActivity,
-                *ALL_PERMS
+                ALL_PERMS.toList()
             )
         ).isFalse()
     }
@@ -497,7 +497,7 @@ class EasyPermissionsTest {
         assertThat(
             EasyPermissions.somePermissionPermanentlyDenied(
                 spyAppCompatActivity,
-                *ALL_PERMS
+                ALL_PERMS.toList()
             )
         ).isTrue()
     }
@@ -509,7 +509,7 @@ class EasyPermissionsTest {
         assertThat(
             EasyPermissions.somePermissionPermanentlyDenied(
                 spyAppCompatActivity,
-                *ALL_PERMS
+                ALL_PERMS.toList()
             )
         ).isFalse()
     }
@@ -698,7 +698,7 @@ class EasyPermissionsTest {
         assertThat(
             EasyPermissions.somePermissionPermanentlyDenied(
                 spyFragment,
-                *ALL_PERMS
+                ALL_PERMS.toList()
             )
         ).isTrue()
     }
@@ -710,7 +710,7 @@ class EasyPermissionsTest {
         assertThat(
             EasyPermissions.somePermissionPermanentlyDenied(
                 spyFragment,
-                *ALL_PERMS
+                ALL_PERMS.toList()
             )
         ).isFalse()
     }
