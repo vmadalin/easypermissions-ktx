@@ -66,7 +66,7 @@ abstract class PermissionsHelper<T>(val host: T) {
         }
     }
 
-    fun somePermissionPermanentlyDenied(perms: Array<out String>): Boolean {
+    fun somePermissionPermanentlyDenied(perms: List<String>): Boolean {
         return perms.any { permissionPermanentlyDenied(it) }
     }
 

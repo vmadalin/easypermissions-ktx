@@ -236,7 +236,7 @@ object EasyPermissions {
     @JvmStatic
     fun somePermissionPermanentlyDenied(
         host: Activity,
-        @Size(min = 1) vararg deniedPerms: String
+        deniedPerms: List<String>
     ): Boolean {
         return PermissionsHelper.newInstance(host).somePermissionPermanentlyDenied(deniedPerms)
     }
@@ -247,7 +247,7 @@ object EasyPermissions {
     @JvmStatic
     fun somePermissionPermanentlyDenied(
         host: Fragment,
-        @Size(min = 1) vararg deniedPerms: String
+        deniedPerms: List<String>
     ): Boolean {
         return PermissionsHelper.newInstance(host).somePermissionPermanentlyDenied(deniedPerms)
     }

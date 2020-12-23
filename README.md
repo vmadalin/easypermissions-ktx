@@ -1,4 +1,4 @@
-# EasyPermissions-ktx [![Build Status][1]][2] [![Code Coverage][3]][4] [![Kotlin Version][5]][6] [![Android API][7]][8] [![Apache License][9]][10]
+# EasyPermissions-ktx [![Build Status][1]][2] [![Code Coverage][3]][4] [![Latest Version][5]][6] [![Android API][7]][8] [![Apache License][9]][10]
 
 Kotlin version of the popular [googlesample/easypermissions](https://github.com/googlesamples/easypermissions) wrapper library to simplify basic system
 permissions logic on Android M or higher.
@@ -130,7 +130,7 @@ override fun onPermissionsDenied(requestCode: Int, perms: List<String>) {
 
     // (Optional) Check whether the user denied any permissions and checked "NEVER ASK AGAIN."
     // This will display a dialog directing them to enable the permission in app settings.
-    if (EasyPermissions.somePermissionPermanentlyDenied(this, perms.toString())) {
+    if (EasyPermissions.somePermissionPermanentlyDenied(this, perms)) {
         SettingsDialog.Builder(this).build().show()
     }
 }
@@ -198,8 +198,8 @@ Rationale callbacks don't necessarily imply permission changes. To check for tho
 [2]: https://travis-ci.com/vmadalin/easypermissions-ktx
 [3]: https://codecov.io/gh/vmadalin/easypermissions-ktx/branch/master/graph/badge.svg
 [4]: https://codecov.io/gh/vmadalin/easypermissions-ktx
-[5]: https://img.shields.io/badge/kotlin-1.4.10-blue.svg
-[6]: http://kotlinlang.org/
+[5]: https://api.bintray.com/packages/mvalceleanu/EasyPermissions-ktx/easypermissions-ktx/images/download.svg
+[6]: https://bintray.com/mvalceleanu/EasyPermissions-ktx/easypermissions-ktx/_latestVersion
 [7]: https://img.shields.io/badge/API-14%2B-blue.svg?style=flat
 [8]: https://android-arsenal.com/api?level=14
 [9]: https://img.shields.io/badge/License-Apache%202.0-lightgrey.svg
