@@ -5,18 +5,26 @@ apply plugin: 'kotlin-allopen'
 apply plugin: 'com.vanniktech.android.junit.jacoco'
 apply plugin: 'org.jetbrains.dokka'
 
+// See: https://github.com/vanniktech/gradle-maven-publish-plugin/issues/206
+ext {
+    RELEASE_REPOSITORY_URL = "https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/"
+    SNAPSHOT_REPOSITORY_URL = "https://s01.oss.sonatype.org/content/repositories/snapshots/"
+}
+
+apply plugin: 'com.vanniktech.maven.publish'
+
 allOpen {
     annotation("com.vmadalin.easypermissions.annotations.Mockable")
 }
 
 android {
-    compileSdkVersion project.compileSdk
+    compileSdkVersion 30
 
     defaultConfig {
         minSdkVersion 14
-        targetSdkVersion targetSdk
+        targetSdkVersion 30
         versionCode 1
-        versionName mavenVersion
+        versionName "1.0.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
 
@@ -70,7 +78,6 @@ dependencies {
     testAnnotationProcessor 'com.google.auto.service:auto-service:1.0-rc4'
 }
 
-apply from: 'bintray.gradle'
 repositories {
     mavenCentral()
 }

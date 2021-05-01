@@ -1,9 +1,10 @@
-# EasyPermissions-ktx [![Build Status][1]][2] [![Code Coverage][3]][4] [![Latest Version][5]][6] [![Android API][7]][8] [![Apache License][9]][10]
+# EasyPermissions-ktx
+[![Build Status][1]][2] [![Code Coverage][3]][4] [![Latest Version][5]][6] [![Android API][7]][8] [![Kotlin Weekly][9]][10] [![Android Weekly][11]][12] [![Apache License][13]][14]
 
 Kotlin version of the popular [googlesample/easypermissions](https://github.com/googlesamples/easypermissions) wrapper library to simplify basic system
 permissions logic on Android M or higher.
 
-![](art/logo.png)
+[![Logo](art/logo.png)](https://www.youtube.com/watch?v=51fX94dU7Og)
 
 This library lifts the burden that comes with writing a bunch of check statements whether a permission has been granted or not from you, in order to keep your code clean and safe.
 
@@ -13,9 +14,13 @@ EasyPermissions-ktx is installed by adding the following dependency to your `bui
 
 ```groovy
 dependencies {
-    implementation 'com.vmadalin:easypermissions-ktx:0.1.0'
+    implementation 'com.vmadalin:easypermissions-ktx:1.0.0'
 }
 ```
+
+## Tutorial
+
+This [video tutorial](https://www.youtube.com/watch?v=51fX94dU7Og) helps and guide you regarding all the process to integrate the library to your project and configure it, thanks to [Stevdza-San](https://www.youtube.com/channel/UCYLAirIEMMXtWOECuZAtjqQ).
 
 ## Usage
 
@@ -194,13 +199,17 @@ Rationale callbacks don't necessarily imply permission changes. To check for tho
 
 ```
 
-[1]: https://travis-ci.com/vmadalin/easypermissions-ktx.svg?branch=master
-[2]: https://travis-ci.com/vmadalin/easypermissions-ktx
+[1]: https://github.com/VMadalin/easypermissions-ktx/workflows/build/badge.svg
+[2]: https://github.com/VMadalin/easypermissions-ktx/actions
 [3]: https://codecov.io/gh/vmadalin/easypermissions-ktx/branch/master/graph/badge.svg
 [4]: https://codecov.io/gh/vmadalin/easypermissions-ktx
 [5]: https://api.bintray.com/packages/mvalceleanu/EasyPermissions-ktx/easypermissions-ktx/images/download.svg
 [6]: https://bintray.com/mvalceleanu/EasyPermissions-ktx/easypermissions-ktx/_latestVersion
 [7]: https://img.shields.io/badge/API-14%2B-blue.svg?style=flat
 [8]: https://android-arsenal.com/api?level=14
-[9]: https://img.shields.io/badge/License-Apache%202.0-lightgrey.svg
-[10]: http://www.apache.org/licenses/LICENSE-2.0
+[9]: https://img.shields.io/badge/Kotlin%20Weekly-%23230-yellow
+[10]: https://mailchi.mp/kotlinweekly/kotlin-weekly-230
+[11]: https://img.shields.io/badge/Android%20Weekly-%23446-yellow
+[12]: https://androidweekly.net/issues/issue-446
+[13]: https://img.shields.io/badge/License-Apache%202.0-lightgrey.svg
+[14]: http://www.apache.org/licenses/LICENSE-2.0
