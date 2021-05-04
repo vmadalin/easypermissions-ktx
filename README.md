@@ -198,13 +198,12 @@ Rationale callbacks don't necessarily imply permission changes. To check for tho
    limitations under the License.
 
 ```
-
 [1]: https://github.com/VMadalin/easypermissions-ktx/workflows/build/badge.svg
 [2]: https://github.com/VMadalin/easypermissions-ktx/actions
 [3]: https://codecov.io/gh/vmadalin/easypermissions-ktx/branch/master/graph/badge.svg
 [4]: https://codecov.io/gh/vmadalin/easypermissions-ktx
-[5]: https://api.bintray.com/packages/mvalceleanu/EasyPermissions-ktx/easypermissions-ktx/images/download.svg
-[6]: https://bintray.com/mvalceleanu/EasyPermissions-ktx/easypermissions-ktx/_latestVersion
+[5]: https://img.shields.io/maven-central/v/com.vmadalin/easypermissions-ktx.svg?label=Maven%20Central
+[6]: https://search.maven.org/search?q=g:%22com.vmadalin%22%20AND%20a:%22easypermissions-ktx%22
 [7]: https://img.shields.io/badge/API-14%2B-blue.svg?style=flat
 [8]: https://android-arsenal.com/api?level=14
 [9]: https://img.shields.io/badge/Kotlin%20Weekly-%23230-yellow

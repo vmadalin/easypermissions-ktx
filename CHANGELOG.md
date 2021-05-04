@@ -1,7 +1,7 @@
 Change Log
 ==========
 
-Version 1.0.0 *(2021-05-01)*
+Version 1.0.0 *(2021-05-04)*
 ----------------------------
 
  * Migrated to maven central.
