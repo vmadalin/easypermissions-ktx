@@ -99,8 +99,9 @@ object EasyPermissions {
     @JvmStatic
     fun requestPermissions(
         host: Activity,
-        rationale: String,
         requestCode: Int,
+        //Changed rationale param by Rationale Type which can allows Standard or Custom Rationales
+        rationale: RationaleType,
         @Size(min = 1) vararg perms: String
     ) {
         val request = PermissionRequest.Builder(host)
@@ -110,7 +111,6 @@ object EasyPermissions {
             .build()
         requestPermissions(host, request)
     }
-
     /**
      * Request permissions from a Support Fragment with standard OK/Cancel buttons.
      *
@@ -119,8 +119,9 @@ object EasyPermissions {
     @JvmStatic
     fun requestPermissions(
         host: Fragment,
-        rationale: String,
         requestCode: Int,
+        //Changed rationale param by Rationale Type which can allows Standard or Custom Rationales
+        rationale: RationaleType,
         @Size(min = 1) vararg perms: String
     ) {
         val request = PermissionRequest.Builder(host.context)
@@ -324,5 +325,15 @@ object EasyPermissions {
     ) {
         val grantResults = IntArray(perms.size) { PackageManager.PERMISSION_GRANTED }
         onRequestPermissionsResult(requestCode, perms, grantResults, receiver)
+    }
+
+    /**
+     * Class which define type of Rationale. Can be used a Standard Rationale and send a string which is provided by EasyPermission library
+     * or Custom Rationale where you can send your own Rationale.
+     *
+     */
+    sealed class RationaleType {
+        class StandardRationale(val rationale: String) : RationaleType()
+        class CustomRationale(val rationale: (PermissionRequest) -> Unit) : RationaleType()
     }
 }

@@ -17,23 +17,24 @@ package com.vmadalin.easypermissions
 
 import android.Manifest
 import androidx.test.core.app.ApplicationProvider
-import org.junit.Before
-import org.junit.Test
-import org.junit.runner.RunWith
-import org.robolectric.RobolectricTestRunner
-import org.robolectric.annotation.Config
+import com.google.common.truth.Truth.assertThat
+import com.nhaarman.mockitokotlin2.capture
 import com.vmadalin.easypermissions.components.TestActivity
 import com.vmadalin.easypermissions.components.TestAppCompatActivity
 import com.vmadalin.easypermissions.components.TestFragment
 import com.vmadalin.easypermissions.components.TestSupportFragmentActivity
 import com.vmadalin.easypermissions.controllers.ActivityController
 import com.vmadalin.easypermissions.controllers.FragmentController
-
-import com.google.common.truth.Truth.assertThat
-import org.mockito.*
+import org.junit.Before
+import org.junit.Test
+import org.junit.runner.RunWith
 import org.mockito.ArgumentCaptor
-import org.mockito.Mockito.*
-import com.nhaarman.mockitokotlin2.capture
+import org.mockito.Captor
+import org.mockito.Mockito.spy
+import org.mockito.Mockito.verify
+import org.mockito.MockitoAnnotations
+import org.robolectric.RobolectricTestRunner
+import org.robolectric.annotation.Config
 
 private const val RATIONALE = "RATIONALE"
 private val ALL_PERMS = arrayOf(Manifest.permission.READ_SMS, Manifest.permission.ACCESS_FINE_LOCATION)
@@ -85,8 +86,8 @@ class EasyPermissionsLowApiTest {
     fun shouldCallbackOnPermissionGranted_whenRequestFromActivity() {
         EasyPermissions.requestPermissions(
             spyActivity,
-            RATIONALE,
             TestActivity.REQUEST_CODE,
+            EasyPermissions.RationaleType.StandardRationale(RATIONALE),
             *ALL_PERMS
         )
 
@@ -99,8 +100,10 @@ class EasyPermissionsLowApiTest {
     fun shouldCallbackOnPermissionGranted_whenRequestFromSupportFragmentActivity() {
         EasyPermissions.requestPermissions(
             spySupportFragmentActivity,
-            RATIONALE,
             TestSupportFragmentActivity.REQUEST_CODE,
+            EasyPermissions.RationaleType.CustomRationale {
+
+            },
             *ALL_PERMS
         )
 
@@ -113,8 +116,8 @@ class EasyPermissionsLowApiTest {
     fun shouldCallbackOnPermissionGranted_whenRequestFromAppCompatActivity() {
         EasyPermissions.requestPermissions(
             spyAppCompatActivity,
-            RATIONALE,
             TestAppCompatActivity.REQUEST_CODE,
+            EasyPermissions.RationaleType.StandardRationale(RATIONALE),
             *ALL_PERMS
         )
 
@@ -127,8 +130,10 @@ class EasyPermissionsLowApiTest {
     fun shouldCallbackOnPermissionGranted_whenRequestFromFragment() {
         EasyPermissions.requestPermissions(
             spyFragment,
-            RATIONALE,
             TestFragment.REQUEST_CODE,
+            EasyPermissions.RationaleType.CustomRationale {
+
+            },
             *ALL_PERMS
         )
 

@@ -18,6 +18,7 @@ package com.vmadalin.easypermissions.models
 import android.content.Context
 import androidx.annotation.StringRes
 import androidx.annotation.StyleRes
+import com.vmadalin.easypermissions.EasyPermissions
 import com.vmadalin.easypermissions.R
 
 /**
@@ -31,10 +32,17 @@ data class PermissionRequest(
     var theme: Int,
     var code: Int,
     var perms: Array<out String>,
-    var rationale: String?,
+    var rationale: EasyPermissions.RationaleType,
     var positiveButtonText: String?,
     var negativeButtonText: String?
 ) {
+
+    //Override invoke to pass model which contains code and perms as parameter
+    operator fun invoke (model: PermissionRequest) {
+        if(rationale is EasyPermissions.RationaleType.CustomRationale) {
+            (rationale as EasyPermissions.RationaleType.CustomRationale).rationale(model)
+        }
+    }
 
     override fun equals(other: Any?): Boolean {
         if (this === other) return true
@@ -56,7 +64,7 @@ data class PermissionRequest(
         var result = theme
         result = 31 * result + code
         result = 31 * result + perms.contentHashCode()
-        result = 31 * result + (rationale?.hashCode() ?: 0)
+        result = 31 * result + rationale.hashCode()
         result = 31 * result + (positiveButtonText?.hashCode() ?: 0)
         result = 31 * result + (negativeButtonText?.hashCode() ?: 0)
         return result
@@ -73,15 +81,16 @@ data class PermissionRequest(
         private var theme = 0
         private var code = 0
         private var perms: Array<out String> = emptyArray()
-        private var rationale = context?.getString(R.string.rationale_ask)
+        //Changed rationale param by Unit to implement lambda functions on callback
+        private var rationale: EasyPermissions.RationaleType = EasyPermissions.RationaleType.StandardRationale(
+            context?.getString(R.string.rationale_ask) ?: "")
         private var positiveButtonText = context?.getString(android.R.string.ok)
         private var negativeButtonText = context?.getString(android.R.string.cancel)
 
         fun theme(@StyleRes theme: Int) = apply { this.theme = theme }
         fun code(code: Int) = apply { this.code = code }
         fun perms(perms: Array<out String>) = apply { this.perms = perms }
-        fun rationale(rationale: String) = apply { this.rationale = rationale }
-        fun rationale(@StringRes resId: Int) = apply { this.rationale = context?.getString(resId) }
+        fun rationale(rationale: EasyPermissions.RationaleType) = apply { this.rationale = rationale }
         fun positiveButtonText(positiveButtonText: String) =
             apply { this.positiveButtonText = positiveButtonText }
 

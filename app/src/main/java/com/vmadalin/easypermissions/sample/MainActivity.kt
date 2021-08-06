@@ -22,11 +22,13 @@ import android.util.Log
 import android.widget.Toast
 import android.widget.Toast.LENGTH_LONG
 import androidx.appcompat.app.AppCompatActivity
-import kotlinx.android.synthetic.main.activity_main.*
+import com.vmadalin.easypermissions.EasyPermissions
 import com.vmadalin.easypermissions.annotations.AfterPermissionGranted
 import com.vmadalin.easypermissions.dialogs.DEFAULT_SETTINGS_REQ_CODE
 import com.vmadalin.easypermissions.dialogs.SettingsDialog
-import com.vmadalin.easypermissions.EasyPermissions
+import com.vmadalin.easypermissions.helpers.base.PermissionsHelper
+import com.vmadalin.easypermissions.models.PermissionRequest
+import kotlinx.android.synthetic.main.activity_main.*
 
 private const val TAG = "MainActivity"
 private const val REQUEST_CODE_CAMERA_PERMISSION = 123
@@ -132,8 +134,11 @@ class MainActivity : AppCompatActivity(),
             // Ask for one permission
             EasyPermissions.requestPermissions(
                 this,
-                getString(R.string.permission_camera_rationale_message),
                 REQUEST_CODE_CAMERA_PERMISSION,
+                EasyPermissions.RationaleType.CustomRationale { request ->
+                    //TODO: Show customize rational (Not required)
+                    showTODORationalCustomDialog(request)
+                },
                 CAMERA
             )
         }
@@ -148,8 +153,8 @@ class MainActivity : AppCompatActivity(),
             // Ask for one permission
             EasyPermissions.requestPermissions(
                 this,
-                getString(R.string.permission_storage_rationale_message),
                 REQUEST_CODE_STORAGE_PERMISSION,
+                EasyPermissions.RationaleType.StandardRationale("TODO: Message"),
                 WRITE_EXTERNAL_STORAGE
             )
         }
@@ -164,8 +169,11 @@ class MainActivity : AppCompatActivity(),
             // Ask for both permissions
             EasyPermissions.requestPermissions(
                 this,
-                getString(R.string.permission_location_and_contacts_rationale_message),
                 REQUEST_CODE_LOCATION_AND_CONTACTS_PERMISSION,
+                EasyPermissions.RationaleType.CustomRationale { request ->
+                    //TODO: Show customize rational (Not required)
+                    showTODORationalCustomDialog(request)
+                },
                 ACCESS_FINE_LOCATION, READ_CONTACTS
             )
         }
@@ -185,5 +193,24 @@ class MainActivity : AppCompatActivity(),
 
     private fun hasStoragePermission(): Boolean {
         return EasyPermissions.hasPermissions(this, WRITE_EXTERNAL_STORAGE)
+    }
+
+    private fun showTODORationalCustomDialog(request: PermissionRequest) {
+        android.app.AlertDialog.Builder(this)
+            .setCancelable(false)
+            .setMessage("TODO: custom Rational Message")
+            .setPositiveButton("Yes") { view, _ ->
+                PermissionsHelper
+                    .newInstance(this)
+                    .directRequestPermissions(
+                        request.code,
+                        request.perms
+                    )
+                view.dismiss()
+            }
+            .setNegativeButton("No") { view, _ ->
+                view.dismiss()
+            }
+            .show()
     }
 }

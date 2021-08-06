@@ -41,6 +41,7 @@ import com.vmadalin.easypermissions.controllers.FragmentController
 import java.util.*
 import com.google.common.truth.Truth.assertThat
 import com.nhaarman.mockitokotlin2.capture
+import com.vmadalin.easypermissions.dialogs.RationaleDialog
 import org.junit.Assert.fail
 import org.mockito.Mockito.*
 import org.robolectric.Shadows.shadowOf
@@ -158,8 +159,8 @@ class EasyPermissionsTest {
 
         EasyPermissions.requestPermissions(
             spyActivity,
-            RATIONALE,
             TestActivity.REQUEST_CODE,
+            EasyPermissions.RationaleType.StandardRationale(RATIONALE),
             *ALL_PERMS
         )
 
@@ -179,8 +180,10 @@ class EasyPermissionsTest {
 
         EasyPermissions.requestPermissions(
             spyActivity,
-            RATIONALE,
             TestActivity.REQUEST_CODE,
+            EasyPermissions.RationaleType.CustomRationale {
+
+            },
             *ALL_PERMS
         )
 
@@ -194,8 +197,8 @@ class EasyPermissionsTest {
 
         EasyPermissions.requestPermissions(
             spyActivity,
-            RATIONALE,
             TestActivity.REQUEST_CODE,
+            EasyPermissions.RationaleType.StandardRationale(RATIONALE),
             *ALL_PERMS
         )
 
@@ -209,8 +212,10 @@ class EasyPermissionsTest {
 
         EasyPermissions.requestPermissions(
             spyActivity,
-            RATIONALE,
             TestActivity.REQUEST_CODE,
+            EasyPermissions.RationaleType.CustomRationale {
+
+            },
             *ALL_PERMS
         )
 
@@ -224,8 +229,10 @@ class EasyPermissionsTest {
 
         EasyPermissions.requestPermissions(
             spyActivity,
-            RATIONALE,
             TestActivity.REQUEST_CODE,
+            EasyPermissions.RationaleType.CustomRationale { permissionRequest ->
+                RationaleDialog(spyActivity, permissionRequest, RATIONALE).showDialog()
+            },
             *ALL_PERMS
         )
 
@@ -242,7 +249,7 @@ class EasyPermissionsTest {
             .theme(R.style.Theme_AppCompat)
             .code(TestActivity.REQUEST_CODE)
             .perms(ALL_PERMS)
-            .rationale(android.R.string.unknownName)
+            .rationale(EasyPermissions.RationaleType.StandardRationale("Unknown"))
             .positiveButtonText(android.R.string.ok)
             .negativeButtonText(android.R.string.cancel)
             .build()
@@ -349,8 +356,10 @@ class EasyPermissionsTest {
 
         EasyPermissions.requestPermissions(
             spyAppCompatActivity,
-            RATIONALE,
             TestAppCompatActivity.REQUEST_CODE,
+            EasyPermissions.RationaleType.CustomRationale {
+
+            },
             *ALL_PERMS
         )
 
@@ -371,8 +380,8 @@ class EasyPermissionsTest {
 
         EasyPermissions.requestPermissions(
             spyAppCompatActivity,
-            RATIONALE,
             TestAppCompatActivity.REQUEST_CODE,
+            EasyPermissions.RationaleType.StandardRationale(RATIONALE),
             *ALL_PERMS
         )
 
@@ -386,8 +395,10 @@ class EasyPermissionsTest {
 
         EasyPermissions.requestPermissions(
             spyAppCompatActivity,
-            RATIONALE,
             TestAppCompatActivity.REQUEST_CODE,
+            EasyPermissions.RationaleType.CustomRationale {
+
+            },
             *ALL_PERMS
         )
 
@@ -401,8 +412,8 @@ class EasyPermissionsTest {
 
         EasyPermissions.requestPermissions(
             spyAppCompatActivity,
-            RATIONALE,
             TestAppCompatActivity.REQUEST_CODE,
+            EasyPermissions.RationaleType.StandardRationale(RATIONALE),
             *ALL_PERMS
         )
 
@@ -417,8 +428,10 @@ class EasyPermissionsTest {
 
         EasyPermissions.requestPermissions(
             spyAppCompatActivity,
-            RATIONALE,
             TestAppCompatActivity.REQUEST_CODE,
+            EasyPermissions.RationaleType.CustomRationale { permissionRequest ->
+                RationaleDialog(spyAppCompatActivity, permissionRequest, RATIONALE).showCompatDialog()
+            },
             *ALL_PERMS
         )
 
@@ -433,8 +446,8 @@ class EasyPermissionsTest {
 
         EasyPermissions.requestPermissions(
             spyFragmentActivity,
-            RATIONALE,
             TestSupportFragmentActivity.REQUEST_CODE,
+            EasyPermissions.RationaleType.StandardRationale(RATIONALE),
             *ALL_PERMS
         )
 
@@ -451,7 +464,9 @@ class EasyPermissionsTest {
             .theme(R.style.Theme_AppCompat)
             .code(TestAppCompatActivity.REQUEST_CODE)
             .perms(ALL_PERMS)
-            .rationale(android.R.string.unknownName)
+            .rationale(EasyPermissions.RationaleType.CustomRationale{ permissionRequest ->
+                RationaleDialog(spyFragmentActivity, permissionRequest, "Unknown").showCompatDialog()
+            })
             .positiveButtonText(android.R.string.ok)
             .negativeButtonText(android.R.string.cancel)
             .build()
@@ -568,8 +583,8 @@ class EasyPermissionsTest {
 
         EasyPermissions.requestPermissions(
             spyFragment,
-            RATIONALE,
             TestFragment.REQUEST_CODE,
+            EasyPermissions.RationaleType.StandardRationale(RATIONALE),
             *ALL_PERMS
         )
 
@@ -589,8 +604,10 @@ class EasyPermissionsTest {
 
         EasyPermissions.requestPermissions(
             spyFragment,
-            RATIONALE,
             TestFragment.REQUEST_CODE,
+            EasyPermissions.RationaleType.CustomRationale {
+
+            },
             *ALL_PERMS
         )
 
@@ -604,8 +621,8 @@ class EasyPermissionsTest {
 
         EasyPermissions.requestPermissions(
             spyFragment,
-            RATIONALE,
             TestFragment.REQUEST_CODE,
+            EasyPermissions.RationaleType.StandardRationale(RATIONALE),
             *ALL_PERMS
         )
 
@@ -619,8 +636,10 @@ class EasyPermissionsTest {
 
         EasyPermissions.requestPermissions(
             spyFragment,
-            RATIONALE,
             TestFragment.REQUEST_CODE,
+            EasyPermissions.RationaleType.CustomRationale { permissionRequest ->
+                RationaleDialog(spyFragment.requireContext(), permissionRequest, RATIONALE).showDialog()
+            },
             *ALL_PERMS
         )
 
@@ -634,8 +653,8 @@ class EasyPermissionsTest {
 
         EasyPermissions.requestPermissions(
             spyFragment,
-            RATIONALE,
             TestFragment.REQUEST_CODE,
+            EasyPermissions.RationaleType.StandardRationale(RATIONALE),
             *ALL_PERMS
         )
 
@@ -652,7 +671,10 @@ class EasyPermissionsTest {
             .theme(R.style.Theme_AppCompat)
             .code(TestFragment.REQUEST_CODE)
             .perms(ALL_PERMS)
-            .rationale(RATIONALE)
+            .rationale(EasyPermissions.RationaleType.CustomRationale { permissionRequest ->
+                RationaleDialog(spyFragment.requireContext(), permissionRequest, RATIONALE).showDialog()
+
+            })
             .positiveButtonText(POSITIVE)
             .negativeButtonText(NEGATIVE)
             .build()
