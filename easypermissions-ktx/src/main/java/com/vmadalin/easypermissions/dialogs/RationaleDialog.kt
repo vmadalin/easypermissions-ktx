@@ -33,7 +33,8 @@ import com.vmadalin.easypermissions.models.PermissionRequest
  */
 class RationaleDialog(
     private val context: Context,
-    private val model: PermissionRequest
+    private val model: PermissionRequest,
+    private val rationale: String
 ) : DialogInterface.OnClickListener {
 
     private val permissionCallbacks: EasyPermissions.PermissionCallbacks?
@@ -47,7 +48,7 @@ class RationaleDialog(
     fun showCompatDialog() {
         AlertDialog.Builder(context, model.theme)
             .setCancelable(false)
-            .setMessage(model.rationale)
+            .setMessage(rationale)
             .setPositiveButton(model.positiveButtonText, this)
             .setNegativeButton(model.negativeButtonText, this)
             .show()
@@ -56,7 +57,7 @@ class RationaleDialog(
     fun showDialog() {
         android.app.AlertDialog.Builder(context, model.theme)
             .setCancelable(false)
-            .setMessage(model.rationale)
+            .setMessage(rationale)
             .setPositiveButton(model.positiveButtonText, this)
             .setNegativeButton(model.negativeButtonText, this)
             .show()

@@ -31,6 +31,7 @@ import com.vmadalin.easypermissions.components.TestActivity
 import com.vmadalin.easypermissions.dialogs.RationaleDialog
 import com.vmadalin.easypermissions.models.PermissionRequest
 
+private const val RATIONALE = "RATIONALE"
 private const val REQUEST_CODE = 5
 private val PERMS = arrayOf(READ_SMS, ACCESS_FINE_LOCATION)
 
@@ -56,7 +57,7 @@ class RationaleDialogTest {
             .code(REQUEST_CODE)
             .perms(PERMS)
             .build()
-        rationaleDialog = RationaleDialog(testActivity, permissionRequest)
+        rationaleDialog = RationaleDialog(testActivity, permissionRequest, RATIONALE)
         rationaleDialog.onClick(dialogInterface, Dialog.BUTTON_POSITIVE)
 
         verify(testActivity).onRationaleAccepted(REQUEST_CODE)
@@ -68,7 +69,7 @@ class RationaleDialogTest {
     @Test
     fun shouldOnRationaleAcceptedWithDefaultValues_whenPositiveButtonClickedWithEmptyRequest() {
         val permissionRequest = PermissionRequest.Builder(testActivity).build()
-        rationaleDialog = RationaleDialog(testActivity, permissionRequest)
+        rationaleDialog = RationaleDialog(testActivity, permissionRequest, RATIONALE)
         rationaleDialog.onClick(dialogInterface, Dialog.BUTTON_POSITIVE)
 
         verify(testActivity).onRationaleAccepted(0)
@@ -83,7 +84,7 @@ class RationaleDialogTest {
             .code(REQUEST_CODE)
             .perms(PERMS)
             .build()
-        rationaleDialog = RationaleDialog(testActivity, permissionRequest)
+        rationaleDialog = RationaleDialog(testActivity, permissionRequest, RATIONALE)
         rationaleDialog.onClick(dialogInterface, Dialog.BUTTON_NEGATIVE)
 
         verify(testActivity).onRationaleDenied(REQUEST_CODE)
@@ -95,7 +96,7 @@ class RationaleDialogTest {
     @Test
     fun shouldOnRationaleDeclinedWithDefaultValues_whenPositiveButtonClickedWithEmptyRequest() {
         val permissionRequest = PermissionRequest.Builder(testActivity).build()
-        rationaleDialog = RationaleDialog(testActivity, permissionRequest)
+        rationaleDialog = RationaleDialog(testActivity, permissionRequest, RATIONALE)
         rationaleDialog.onClick(dialogInterface, Dialog.BUTTON_NEGATIVE)
 
         verify(testActivity).onRationaleDenied(0)
@@ -110,7 +111,7 @@ class RationaleDialogTest {
             .code(REQUEST_CODE)
             .perms(PERMS)
             .build()
-        rationaleDialog = RationaleDialog(testActivity, permissionRequest)
+        rationaleDialog = RationaleDialog(testActivity, permissionRequest, RATIONALE)
 
         verify(testActivity, never()).onRationaleAccepted(anyInt())
         verify(testActivity, never()).onRationaleDenied(anyInt())

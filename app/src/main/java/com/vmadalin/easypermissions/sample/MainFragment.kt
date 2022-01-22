@@ -26,6 +26,8 @@ import androidx.fragment.app.Fragment
 import kotlinx.android.synthetic.main.fragment_main.*
 import com.vmadalin.easypermissions.annotations.AfterPermissionGranted
 import com.vmadalin.easypermissions.EasyPermissions
+import com.vmadalin.easypermissions.helpers.base.PermissionsHelper
+import com.vmadalin.easypermissions.models.PermissionRequest
 
 private const val TAG = "MainFragment"
 private const val REQUEST_CODE_SMS_PERMISSION = 126
@@ -89,8 +91,8 @@ class MainFragment : Fragment(), EasyPermissions.PermissionCallbacks {
             // Request one permission
             EasyPermissions.requestPermissions(
                 this,
-                getString(R.string.permission_sms_rationale_message),
                 REQUEST_CODE_SMS_PERMISSION,
+                EasyPermissions.RationaleType.StandardRationale("TODO: Message"),
                 Manifest.permission.READ_SMS
             )
         }

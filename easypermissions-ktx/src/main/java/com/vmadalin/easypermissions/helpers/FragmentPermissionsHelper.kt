@@ -17,6 +17,7 @@ package com.vmadalin.easypermissions.helpers
 
 import android.content.Context
 import androidx.fragment.app.Fragment
+import com.vmadalin.easypermissions.EasyPermissions
 import com.vmadalin.easypermissions.dialogs.RationaleDialog
 import com.vmadalin.easypermissions.helpers.base.PermissionsHelper
 import com.vmadalin.easypermissions.models.PermissionRequest
@@ -40,7 +41,18 @@ internal class FragmentPermissionsHelper(
 
     override fun showRequestPermissionRationale(permissionRequest: PermissionRequest) {
         context?.let {
-            RationaleDialog(it, permissionRequest).showCompatDialog()
+            when(permissionRequest.rationale) {
+                is EasyPermissions.RationaleType.StandardRationale -> {
+                    RationaleDialog(
+                        it,
+                        permissionRequest,
+                        (permissionRequest.rationale as EasyPermissions.RationaleType.StandardRationale).rationale
+                    ).showCompatDialog()
+                }
+                is EasyPermissions.RationaleType.CustomRationale -> {
+                    (permissionRequest.rationale as EasyPermissions.RationaleType.CustomRationale).rationale.invoke(permissionRequest)
+                }
+            }
         }
     }
 }
