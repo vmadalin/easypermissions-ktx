@@ -11,7 +11,7 @@ ext {
     SNAPSHOT_REPOSITORY_URL = "https://s01.oss.sonatype.org/content/repositories/snapshots/"
 }
 
-apply plugin: 'com.vanniktech.maven.publish'
+//apply plugin: 'com.vanniktech.maven.publish'
 
 allOpen {
     annotation("com.vmadalin.easypermissions.annotations.Mockable")
