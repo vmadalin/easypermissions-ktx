@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.vmadalin.easypermissions">
+
+    <application>
+        <activity android:name=".components.TestActivity"/>
+        <activity android:name=".components.TestAppCompatActivity"/>
+        <activity android:name=".components.TestSupportFragmentActivity"/>
+    </application>
+
+</manifest>
