@@ -17,6 +17,21 @@ dependencies {
     implementation 'com.vmadalin:easypermissions-ktx:1.0.0'
 }
 ```
+Or in newer android studio builds by adding the dependency to your `build.gradle` file as such: 
+
+```groovy
+dependencies {
+    implementation(libs.vmadalin.easy.permissions)
+}
+```
+Followed by adding the following to your `libs.versions.toml` file: 
+```groovy
+[versions]
+easyPermissions = "1.0.0"
+
+[libraries]
+vmadalin-easy-permissions = { group = "com.vmadalin", name = "easypermissions-ktx", version.ref = "easyPermissions" }
+```
 
 ## Tutorial
 
